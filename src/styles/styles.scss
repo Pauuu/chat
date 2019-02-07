@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'variables.scss';
+@import '../../node_modules/bootstrap/scss/bootstrap';
+
+.container-wrapper{
+    height: calc(100vh - 80px) !important;
+}
+
+.form-wrapper{
+    width: 500px;
+    margin: 0 auto;
+}

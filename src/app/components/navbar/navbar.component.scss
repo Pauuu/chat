@@ -1,0 +1,12 @@
+span{
+    color: #123456;
+}
+
+a{
+    color:#00e9e9;
+    margin-left: 3em;
+
+    &.active{
+        border-bottom: #00e9e9
+    }
+}
