@@ -1,3 +1,11 @@
-<p>
-  chatroom-window works!
-</p>
+<div class="h-100 d-flex flex-column chat-window">
+  <app-chatroom-title-bar [title]="'Cats of cats'"></app-chatroom-title-bar>
+
+  <div class="message-wrapper h-100">
+    <ng-containter *ngFor="let message of dummyData">
+      <app-chat-messaege [message]="message"></app-chat-messaege>
+    </ng-containter>
+  </div>
+
+  <app-chat-input></app-chat-input>
+</div>

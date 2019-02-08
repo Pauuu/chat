@@ -1,3 +1,10 @@
-<p>
-  chat-message works!
-</p>
+<div class="chat-message d-flex">
+  <img [src]="message.sender.photoUrl" class="rounded-circle">
+  <div class="name">
+    {{message.sender.firstname}}{{message.sender.lastname}}
+  </div>
+  <small class="timestamp">{{message.createdAt | date:'meduim'}}</small>
+  <div class="message">
+    {{message.message}}
+  </div>
+</div>
