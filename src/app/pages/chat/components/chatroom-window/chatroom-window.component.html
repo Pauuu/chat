@@ -2,9 +2,9 @@
   <app-chatroom-title-bar [title]="'Cats of cats'"></app-chatroom-title-bar>
 
   <div class="message-wrapper h-100">
-    <ng-containter *ngFor="let message of dummyData">
-      <app-chat-messaege [message]="message"></app-chat-messaege>
-    </ng-containter>
+    <ng-container *ngFor="let message of dummyData">
+      <app-chat-message [message]="message"></app-chat-message>
+    </ng-container>
   </div>
 
   <app-chat-input></app-chat-input>
