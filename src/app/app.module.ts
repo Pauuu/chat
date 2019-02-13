@@ -16,6 +16,14 @@ import { ChatroomTitleBarComponent } from './pages/chat/components/chatroom-titl
 import { ChatMessageComponent } from './pages/chat/components/chat-message/chat-message.component';
 import { ChatroomWindowComponent } from './pages/chat/components/chatroom-window/chatroom-window.component';
 
+//services
+import { AlertService } from './services/alert.service';
+import { LoadingService } from './services/loading.service';
+
+//modules
+import { AlertModule } from 'ngx-bootstrap';
+import { NgxLoadingModule } from 'ngx-loading';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,16 +35,24 @@ import { ChatroomWindowComponent } from './pages/chat/components/chatroom-window
     ChatroomListComponent,
     ChatroomTitleBarComponent,
     ChatMessageComponent,
-    ChatroomWindowComponent
+    ChatroomWindowComponent,
+
   ],
   imports: [
+    AlertModule.forRoot(),
     BsDropdownModule.forRoot(),
     ReactiveFormsModule,
     FormsModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgxLoadingModule.forRoot({}),
+
   ],
-  providers: [],
+  providers: [
+    AlertService,
+    NgxLoadingModule,
+    LoadingService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

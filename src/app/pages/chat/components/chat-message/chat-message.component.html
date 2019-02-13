@@ -1,10 +1,12 @@
 <div class="chat-message d-flex">
-  <img [src]="message.sender.photoUrl" class="rounded-circle">
-  <div class="name">
-    {{message.sender.firstname}}{{message.sender.lastname}}
+  <img [src]="message.sender.photoUrl" class="rounded-circle h-50 w-50">
+  <div class="bubble d-flex flex-column">
+      <div class="name">
+    {{message.sender.firstName}} {{message.sender.lastName}}
   </div>
-  <small class="timestamp">{{message.createdAt | date:'meduim'}}</small>
+  <small class="timestamp">{{message.createdAt | date:'medium'}}</small>
   <div class="message">
     {{message.message}}
   </div>
+</div>
 </div>
