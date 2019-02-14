@@ -14,7 +14,7 @@ import { ChatroomWindowComponent } from './pages/chat/components/chatroom-window
 //services
 import { AlertService } from './services/alert.service';
 import { LoadingService } from './services/loading.service';
-
+import { AuthService } from './services/auth.service';
 //modules
 import { AlertModule } from 'ngx-bootstrap';
 import { NgxLoadingModule } from 'ngx-loading';
@@ -52,7 +52,8 @@ import { TooltipModule } from 'ngx-bootstrap/tooltip';
   providers: [
     AlertService,
     NgxLoadingModule,
-    LoadingService
+    LoadingService,
+    AuthService
   ],
   bootstrap: [AppComponent]
 })
