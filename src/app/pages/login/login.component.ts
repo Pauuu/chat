@@ -41,8 +41,10 @@ export class LoginComponent implements OnInit {
       const { email, password } = this.loginForm.value;
       console.log(`Email: ${email}, Password: ${password}`);
       this.loadingService.isLoading.next(false);
+
     } else {
       const failedLoginAlert = new Alert('Your email or password were inavalid, try again.', AlertType.Danger);
+      
       setTimeout(() => {
         this.loadingService.isLoading.next(false);
         this.alertService.alerts.next(failedLoginAlert);

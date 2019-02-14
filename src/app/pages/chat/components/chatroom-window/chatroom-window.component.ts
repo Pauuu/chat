@@ -18,6 +18,55 @@ export class ChatroomWindowComponent implements OnInit {
       lastName: 'Cooper',
       photoUrl: 'http://placekitten.com/g/150/150'
     }
+  },{
+    message: 'Sed enim velit, condimentum nec tincidunt non, elementum sed nisi.',
+    createdAt: new Date(),
+    sender: {
+      firstName: 'Sheldon',
+      lastName: 'Cooper',
+      photoUrl: 'http://placekitten.com/g/150/150'
+    }
+  },{
+    message: 'Sed enim velit, condimentum nec tincidunt non, elementum sed nisi.',
+    createdAt: new Date(),
+    sender: {
+      firstName: 'Sheldon',
+      lastName: 'Cooper',
+      photoUrl: 'http://placekitten.com/g/150/150'
+    }
+  },{
+    message: 'Sed enim velit, condimentum nec tincidunt non, elementum sed nisi.',
+    createdAt: new Date(),
+    sender: {
+      firstName: 'Sheldon',
+      lastName: 'Cooper',
+      photoUrl: 'http://placekitten.com/g/150/150'
+    }
+  },{
+    message: 'Sed enim velit, condimentum nec tincidunt non, elementum sed nisi.',
+    createdAt: new Date(),
+    sender: {
+      firstName: 'Sheldon',
+      lastName: 'Cooper',
+      photoUrl: 'http://placekitten.com/g/150/150'
+    }
+  },{
+    message: 'Sed enim velit, condimentum nec tincidunt non, elementum sed nisi.',
+    createdAt: new Date(),
+    sender: {
+      firstName: 'Sheldon',
+      lastName: 'Cooper',
+      photoUrl: 'http://placekitten.com/g/150/150'
+    }
+  },
+  {
+    message: 'Sed enim velit, condimentum nec tincidunt non, elementum sed nisi.',
+    createdAt: new Date(),
+    sender: {
+      firstName: 'Sheldon',
+      lastName: 'Cooper',
+      photoUrl: 'http://placekitten.com/g/150/150'
+    }
   },
   {
     message: 'Quisque ornare dapibus convallis. Nam tempor dui a nisl lobortis, sed gravida lectus laoreet. Nullam ornare dui magna. Duis in nisi libero.',

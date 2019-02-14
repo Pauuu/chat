@@ -1,5 +1,5 @@
 <div class="chat-message d-flex">
-  <img [src]="message.sender.photoUrl" class="rounded-circle h-50 w-50">
+  <img [src]="message.sender.photoUrl" class="rounded-circle"> <!--eliminado el w-100 y h-100 y puesto en el css-->
   <div class="bubble d-flex flex-column">
       <div class="name">
     {{message.sender.firstName}} {{message.sender.lastName}}

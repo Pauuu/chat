@@ -22,7 +22,7 @@ export class SignupComponent implements OnInit {
     private fb: FormBuilder,
     private alertService: AlertService,
     private loadingService: LoadingService) {
-    
+
     this.createForm();
   }
 
@@ -38,15 +38,20 @@ export class SignupComponent implements OnInit {
     });
   }
 
-  
+
   public submit(): void {
     this.loadingService.isLoading.next(true);
 
     if (this.loginForm.valid) {
       // TODO call the auth service
+
       const { email, password } = this.loginForm.value;
       console.log(`Email: ${email}, Password: ${password}`);
       this.loadingService.isLoading.next(false);
+
+      //pq nunca es usado?
+      const failedLoginAlert = new Alert('Your email or password were inavalid, try again.', AlertType.Success);
+
     } else {
       const failedLoginAlert = new Alert('Your email or password were inavalid, try again.', AlertType.Danger);
       setTimeout(() => {
