@@ -2,13 +2,14 @@
   <div class="container">
     <span class="navbar-brand">ChatApp</span>
     <div class="page-links">
-      <ul class="navbar-nav" *ngIf="false else loggedOut">
+      <!--el if se puede negar para simular si loggeado o no-->
+      <ul class="navbar-nav" *ngIf="!auth.currentUser else loggedOut">
         <!--podemos poner false tmb, esta hardcodeado-->
         <li class="nav-item">
           <a routerLink="/chat" routerLinkActive="active" class="nav-link">Chat Rooms</a>
         </li>
         <li class="nav-item">
-          <a routerLink="/login" class="nav-link">Logout</a>
+          <a (click)="auth.logout()" class="nav-link">Logout</a>
         </li>
       </ul>
     </div>
@@ -21,7 +22,7 @@
       <a routerlink="/login" routerLinkActive="active" class="nav-link">Login</a>
     </li>
     <li class="nav-item">
-        <a routerlink="/logout" class="nav-link">Logout</a>
+        <a routerlink="/logout" class="nav-link">Sign up</a>
     </li>
   </ul>
 </ng-template>

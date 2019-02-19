@@ -1,11 +1,13 @@
 <div class="h-100 d-flex flex-column chat-window">
   <app-chatroom-title-bar [title]="'Cats of cats'"></app-chatroom-title-bar>
 
-  <div class="message-wrapper h-100">
+  <div class="message-wrapper  h-100">
     <ng-container *ngFor="let message of dummyData">
+<!--el scss pone la barra de scroll-->
       <app-chat-message [message]="message"></app-chat-message>
     </ng-container>
+
   </div>
-  
+
   <app-chat-input></app-chat-input>
 </div>

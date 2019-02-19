@@ -3,7 +3,18 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+
+  //api personlaizada a firebase. Solo con esto no nos podemos conectar a firebase
+  // funciona con comillas simples?
+  firebase: {
+    apiKey: 'AIzaSyDDVk3a2kBI6hQQ0JD-gDyVqwFgWxBU7PA',
+    authDomain: 'chat-af26c.firebaseapp.com',
+    databaseURL: 'https://chat-af26c.firebaseio.com',
+    projectId: 'chat-af26c',
+    storageBucket: 'chat-af26c.appspot.com',
+    messagingSenderId: '45670499578'
+  }
 };
 
 /*
