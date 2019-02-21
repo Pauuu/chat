@@ -1,12 +1,17 @@
-span{
+@import'../../../styles/variables.scss';
+
+.nav-item, span{
     color: #dbffd7;
 }
 
+
+
+
 a{
-    color:#a8f1eb;
+    color:#e0f1a8;
     margin-left: 3em;
 
     &.active{
-        border-bottom:3px solid #84e900
+        border-bottom:3px solid #fffb00
     }
 }

@@ -1,11 +1,12 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AlertService } from '../../services/alert.service';
 import { AlertType } from '../../enum/alert-type.enum';
 import { Alert } from '../../classes/alert';
 import { LoadingService } from 'src/app/services/loading.service';
 import { Subscription } from 'rxjs';
-import { Router, ActivatedRoute } from '@angular/router';
+
 import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
@@ -20,8 +21,6 @@ export class LoginComponent implements OnInit, OnDestroy {
   public loginForm: FormGroup;
   private subscriptions: Subscription[] = [];
   private returnUrl: string;
-
-
 
   constructor(
     private fb: FormBuilder,
@@ -63,6 +62,8 @@ export class LoginComponent implements OnInit, OnDestroy {
         this.auth.login(email, password).subscribe(success => {
           if (success) {
             this.router.navigateByUrl(this.returnUrl);
+          } else {
+            // display
           }
           this.loadingService.isLoading.next(false);
         })

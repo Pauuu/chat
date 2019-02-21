@@ -20,13 +20,13 @@ export class SignupComponent implements OnInit {
   private returnUrl: string;
 
   constructor(
-    private fb: FormBuilder, 
-    private alertService: AlertService,  
+    private fb: FormBuilder,
+    private alertService: AlertService,
     private loadingService: LoadingService,
     private auth: AuthService,
     private router: Router,
     private route: ActivatedRoute
-    ) {
+  ) {
     this.createForm();
   }
 
@@ -49,23 +49,22 @@ export class SignupComponent implements OnInit {
     if (this.signupForm.valid) {
       this.loadingService.isLoading.next(true);
       const { firstName, lastName, email, password } = this.signupForm.value;
-      
+
       this.subscriptions.push(
-        this.auth.signup( firstName, lastName, email, password ).subscribe(success => {
+        this.auth.signup(firstName, lastName, email, password).subscribe(success => {
           if (success) {
             this.router.navigateByUrl(this.returnUrl);
           }
           this.loadingService.isLoading.next(false);
         })
       )
-     
+
     } else {
+      
       const failedLoginAlert = new Alert('Please enter valid data in all fields.', AlertType.Danger);
-      
-      
-        this.loadingService.isLoading.next(false);
-        this.alertService.alerts.next(failedLoginAlert);
-     
+      this.loadingService.isLoading.next(false);
+      this.alertService.alerts.next(failedLoginAlert);
+
     }
   }
 

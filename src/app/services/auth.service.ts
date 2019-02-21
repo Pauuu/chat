@@ -12,6 +12,7 @@ import { switchMap } from 'rxjs/operators';
 
 
 
+
 // esto es un servicio
 @Injectable()
 export class AuthService {
@@ -56,16 +57,23 @@ export class AuthService {
   }
 
 
+  // verifica si el login es correcto o no
   public login(email: string, password: string): Observable<boolean> {
-    // TODO fetch with firebase function
-    return of(true);
-
+    //Firebase login function
+    return from(
+      this.afAuth.auth.signInWithEmailAndPassword(email, password)
+        .then((user) => true)
+        .catch((err) => false)
+    );
   }
+
 
   public logout(): void {
     // al pulsar sobre logout ira a la login y saltara el msj
     // TODO fetch with firebase function
-    this.router.navigate(['/login']);
-    this.alertService.alerts.next(new Alert('You have been signed out'));
+    this.afAuth.auth.signOut().then(() => {
+      this.router.navigate(['/login']);
+      this.alertService.alerts.next(new Alert('You have been signed out'));
+    });
   }
 }
