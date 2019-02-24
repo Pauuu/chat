@@ -6,6 +6,8 @@ el boton de submit estara desactivado si la informacion no es valida (carateres 
 <div class="container-wrapper container d-flex justify-content-center align-items-center">
   <div class="form-wrapper text-center">
     <h2 class="text-center">Login</h2>
+
+    <!--fomr-->
     <form [formGroup]="loginForm" (submit)="submit()" novalidate>
       <div class="form-group">
         <input type="email" class="form-control" id="email-input" placeholder="Enter Email" formControlName="email">
@@ -15,8 +17,9 @@ el boton de submit estara desactivado si la informacion no es valida (carateres 
           formControlName="password">
       </div>
       <button type="submit" class="btn btn-primary">Submit</button>
-      <!--[disabled]="!loginForm.valid"-->
     </form>
+    <!--/form-->
+
     <small><a routerLink="/signup">Need an Account?</a></small>
   </div>
 </div>
