@@ -46,7 +46,10 @@ export class SignupComponent implements OnInit {
 
   public submit(): void {
 
+    // if the formulary is valid
     if (this.signupForm.valid) {
+
+      // muestra la animacion de carga 
       this.loadingService.isLoading.next(true);
       const { firstName, lastName, email, password } = this.signupForm.value;
 

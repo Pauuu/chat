@@ -97,11 +97,8 @@ export class ChatroomWindowComponent implements OnInit {
   }
 ];
 
-
-
   constructor() { }
 
   ngOnInit() {
   }
-
 }

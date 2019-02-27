@@ -26,7 +26,7 @@ export class AuthGuard implements CanActivate {
 
     return this.auth.currentUser.pipe(
       take(1),
-      map((currentUser) => !!currentUser),
+      map((currentUser) => !!currentUser), //casteo a boolean
       tap((loggedIn) => {
         if (!loggedIn) {
           this.alertService.alerts.next(new Alert('You must be logged in to access that page.', AlertType.Danger));

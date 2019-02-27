@@ -15,10 +15,8 @@ export class ChatInputComponent implements OnInit {
   }
 
   public submit(message :string):void{
-    console.log("Mew MEssage: ", message);
-
-    this.newMessagetext = "";
-
+    console.log("Mew Message: ", message);
+    this.newMessagetext = '';
   }
 
 }

@@ -9,7 +9,6 @@ import { AuthService } from 'src/app/services/auth.service';
 
 export class NavbarComponent implements OnInit {
 
-  // todos los currentUsr seran null. El any es para todo currentUser (?)
   public currentUser: any = null;
 
   constructor(

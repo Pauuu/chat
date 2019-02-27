@@ -46,7 +46,10 @@ export class LoginComponent implements OnInit, OnDestroy {
 
   public submit(): void {
 
+    // mira si el login form es valido 
     if (this.loginForm.valid) {
+
+      // carga la imagen de cargando 
       this.loadingService.isLoading.next(true);
       const { email, password } = this.loginForm.value;
 
@@ -71,10 +74,10 @@ export class LoginComponent implements OnInit, OnDestroy {
     this.subscriptions.forEach(sub => sub.unsubscribe());
   }
 
+  // display the failed login
   private displayFailedLogin(): void {
     const failedLoginAlert = new Alert('Your email or password were inavalid, try again.', AlertType.Danger);
     this.alertService.alerts.next(failedLoginAlert);
-
   }
 
 }
